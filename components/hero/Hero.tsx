@@ -64,8 +64,8 @@ const Hero = () => {
 
         <div className="absolute left-0 bottom-3 w-full flex items-center justify-between lg:font-light px-5 lg:px-8 lg:text-2xl">
           <div className="flex items-center gap-52">
-            <Link href="#projects">
-              <PiArrowDownThin className="text-5xl max-md:hidden" />
+            <Link href="#projects" className="text-5xl max-md:hidden">
+              <PiArrowDownThin />
             </Link>
             <Link
               href="https://www.linkedin.com/in/terel-phillips"
