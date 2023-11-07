@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
       className="capitalize flex justify-end items-center"
       onClick={scrollToTop}
     >
-      <p className="self-end">to the top</p>
+      <p className="self-end hidden md:block">to the top</p>
       <PiArrowBendRightUpLight className="text-white text-3xl" />
     </button>
   );
