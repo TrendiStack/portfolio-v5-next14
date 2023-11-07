@@ -24,22 +24,34 @@ const ProjectCard = ({ name, fImg, sImg }: ProjectProps) => {
         className="group flex flex-col gap-3"
       >
         <div className="bg-white w-80 h-64 lg:w-[33rem] lg:h-[23rem] rounded-2xl overflow-hidden">
-          <div className="bg-primary w-full h-full flex justify-center items-center scale-110 group-hover:scale-105 transition-all duration-500">
+          <div
+            className="bg-primary w-full h-full flex justify-center items-center lg:scale-110 lg:group-hover:scale-105 lg:transition-all lg:duration-500
+          "
+          >
             {!hover ? (
-              <Image
-                src={fImg.url}
-                alt={`Picture of the ${name} project}`}
-                width={fImg.width}
-                height={fImg.height}
-                className="w-full h-full object-cover"
-              />
+              <>
+                <Image
+                  src={fImg.url}
+                  alt={`Picture of the ${name} project}`}
+                  width={fImg.width}
+                  height={fImg.height}
+                  className="w-full h-full object-cover hidden lg:block"
+                />
+                <Image
+                  src={sImg.url}
+                  alt={`Picture of the ${name} project}`}
+                  width={360}
+                  height={sImg.height}
+                  className="max-md:p-8 lg:hidden h-auto w-auto"
+                />
+              </>
             ) : (
               <Image
                 src={sImg.url}
                 alt={`Picture of the ${name} project}`}
                 width={360}
                 height={sImg.height}
-                className="max-md:p-8"
+                className="max-md:p-8 h-auto w-auto"
               />
             )}
           </div>

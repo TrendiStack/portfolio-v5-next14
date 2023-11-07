@@ -1,12 +1,14 @@
 import { useAnimate } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useNavigation } from '@/stores/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 const Logo = () => {
-  const isMenuOpen = useNavigation(state => state.isMenuOpen);
   const [isHovered, setIsHovered] = useState(false);
   const [scope, animate] = useAnimate();
+  const isMenuOpen = useNavigation(state => state.isMenuOpen);
+  const path = usePathname();
   useEffect(() => {
     const body = document.querySelector('body');
     if (body) {
@@ -59,9 +61,11 @@ const Logo = () => {
             className={`${
               isMenuOpen
                 ? 'stroke-secondary'
+                : path.length > 1
+                ? 'stroke-secondary'
                 : 'stroke-primary lg:stroke-secondary'
             } transition-colors duration-200 ease-in-out`}
-            stroke-width="10"
+            strokeWidth="10"
           />
         </svg>
         <div className="max-lg:hidden group flex items-center gap-1 capitalize overflow-hidden w-0 group-hover:w-[400%] transition-all duration-500 absolute left-10 bottom-0">

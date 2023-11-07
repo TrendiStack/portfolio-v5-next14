@@ -25,8 +25,7 @@ const Projects = ({ params, data }: ProjectsProps) => {
   return (
     <Section
       id="project"
-      padding
-      className="lg:container lg:mx-auto pt-28 lg:px-28 lg:pt-72"
+      className="lg:container lg:mx-auto pt-32 lg:px-28 lg:pt-72"
     >
       <HeaderText text={heading} />
       <HeaderText

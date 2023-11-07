@@ -1,3 +1,7 @@
+'use client';
+
+import { GetViewportHeight } from '@/hooks/getViewportHeight';
+
 interface SectionProps {
   children: React.ReactNode;
   id: string;
@@ -15,12 +19,16 @@ const Section = ({
   height,
 }: SectionProps) => {
   const handlePadding = padding ? 'pt-20 lg:pt-32' : 'pt-0';
-  const handleHeight = height ? '' : 'min-h-screen';
+  const mobileHeight = GetViewportHeight();
 
   return (
     <section
       id={id}
-      className={`${handleHeight} ${handlePadding} px-5 lg:px-8 text-sm lg:text-base ${className}`}
+      className={`${handlePadding} px-5 lg:px-8 text-sm lg:text-base ${className}`}
+      style={{
+        minHeight:
+          height === true ? 'auto' : id === 'info' ? '100vh' : mobileHeight,
+      }}
     >
       {children}
     </section>

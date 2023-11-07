@@ -3,15 +3,17 @@
 import { BsPlayFill, BsPauseFill } from 'react-icons/bs';
 import { useEffect, useRef, useState } from 'react';
 import { useNavigation } from '@/stores/navigation';
+import { usePathname } from 'next/navigation';
 
 interface MusicPlayerProps {
   colour?: string;
 }
 
 const MusicPlayer = ({ colour }: MusicPlayerProps = { colour: 'dark' }) => {
-  const isMenuOpen = useNavigation(state => state.isMenuOpen);
   const [playing, setPlaying] = useState(false);
+  const isMenuOpen = useNavigation(state => state.isMenuOpen);
   const musicRef = useRef<HTMLAudioElement | null>(null);
+  const path = usePathname();
 
   useEffect(() => {
     const handleMusic = (e: { key: string }) => {
@@ -46,7 +48,11 @@ const MusicPlayer = ({ colour }: MusicPlayerProps = { colour: 'dark' }) => {
   return (
     <div
       className={`${
-        isMenuOpen ? 'text-secondary' : 'text-primary lg:text-secondary'
+        isMenuOpen
+          ? 'text-secondary'
+          : path.length > 1
+          ? 'text-secondary'
+          : 'text-primary lg:text-secondary'
       } capitalize flex items-center gap-3 lg:text-lg text-secondarytransition-colors duration-200 ease-in-out`}
     >
       <audio

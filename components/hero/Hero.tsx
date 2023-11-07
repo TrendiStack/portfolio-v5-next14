@@ -1,11 +1,12 @@
 'use client';
 
+import { motion as m, useScroll, useTransform } from 'framer-motion';
 import { PiArrowUpRightThin, PiArrowDownThin } from 'react-icons/pi';
 import { useRef } from 'react';
-import { motion as m, useScroll, useTransform } from 'framer-motion';
 import ContextDivider from '../ContextDivider';
 import Image from 'next/image';
 import Link from 'next/link';
+import mobileHeading from '@/public/images/Mobile heading text.png';
 import Section from '../Section';
 import WavesVideo from '../WavesVideo';
 
@@ -34,7 +35,7 @@ const Hero = () => {
           />
           <div className="absolute top-0 left-0 w-full h-full bg-secondary opacity-60"></div>
         </div>
-        <div className="hero-header font-bold uppercase">
+        <div className="hero-header font-bold uppercase hidden lg:block ">
           <m.h1
             style={{ y: designerY }}
             className="tracking-widest lg:relative bottom-5"
@@ -48,6 +49,15 @@ const Hero = () => {
             developer
           </m.h1>
         </div>
+        <Image
+          src={mobileHeading}
+          alt="Mobile Hero heading"
+          width={760}
+          height={917}
+          quality={80}
+          priority={true}
+          className="lg:hidden w-full"
+        />
 
         <ContextDivider colour="secondary" />
 
@@ -56,7 +66,7 @@ const Hero = () => {
             latest projects <br />
             ©2022
           </p>
-          <p className="max-md:absolute bottom-14 text-xl lg:text-2xl">
+          <p className="max-md:absolute bottom-14 sm:text-xl lg:text-2xl">
             An inquisitive developer rooted in the vibrant city of Toronto,
             Ontario.
           </p>
@@ -76,8 +86,8 @@ const Hero = () => {
               <PiArrowUpRightThin className="group-hover:-rotate-45 transition-all duration-300" />
             </Link>
           </div>
-          <Link href="mailto:hello@terel-phillips.ca" target="_blank">
-            hello@terel-phillips.ca
+          <Link href="mailto:terel.phillips23@gmail.com" target="_blank">
+            terel.phillips23@gmail.com
           </Link>
         </div>
       </Section>

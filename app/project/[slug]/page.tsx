@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Projects from '@/components/projects/Projects';
 import { getProjects } from '@/utils/getProjects';
+import Projects from '@/components/projects/Projects';
 
 type Params = {
   params: {
