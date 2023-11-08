@@ -20,7 +20,7 @@ const Nav = () => {
         <Logo />
         <MusicPlayer colour={isMenuOpen ? 'dark' : ''} />
         <MenuBtn />
-        <ul className="flex gap-10 text-xl max-lg:hidden">
+        <ul className="flex gap-10 2xl:text-xl max-lg:hidden">
           <li>
             <NavBtn text="work" />
           </li>
@@ -28,7 +28,7 @@ const Nav = () => {
             <NavBtn text="info" />
           </li>
           <li>
-            <NavBtn text="contact" />
+            <NavBtn email text="contact" />
           </li>
         </ul>
       </div>

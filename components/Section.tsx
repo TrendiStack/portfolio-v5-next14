@@ -24,7 +24,7 @@ const Section = ({
   return (
     <section
       id={id}
-      className={`${handlePadding} px-5 lg:px-8 text-sm lg:text-base ${className}`}
+      className={`${handlePadding} px-5 lg:px-8 text-sm 2xl:text-base ${className}`}
       style={{
         minHeight:
           height === true ? 'auto' : id === 'info' ? '100vh' : mobileHeight,

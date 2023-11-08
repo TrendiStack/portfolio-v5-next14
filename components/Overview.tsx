@@ -40,10 +40,10 @@ const Overview = ({ title, initial, full }: OverviewProps) => {
       </h3>
       <div className="grid grid-cols-1 gap-3">
         <div>
-          <p className="lg:text-lg">{initial}</p>
+          <p>{initial}</p>
         </div>
         <div id="target" className={`overflow-hidden ${showMore ? '' : 'h-0'}`}>
-          <p className="lg:text-lg ">{full}</p>
+          <p>{full}</p>
         </div>
         {full && (
           <button

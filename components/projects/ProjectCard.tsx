@@ -56,7 +56,7 @@ const ProjectCard = ({ name, fImg, sImg }: ProjectProps) => {
             )}
           </div>
         </div>
-        <h3 className="group lg:font-light inline-flex lg:text-xl">
+        <h3 className="group lg:font-light inline-flex xl:text-lg max-xl:text-lg capitalize ">
           {name}
           <PiArrowUpRightThin className="text-white group-hover:-rotate-45 transition-all duration-300" />
         </h3>

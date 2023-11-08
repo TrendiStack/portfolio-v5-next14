@@ -43,12 +43,10 @@ const Logo = () => {
       >
         <svg
           id="logo"
-          width="35"
-          height="50"
           viewBox="0 0 58 60"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="origin-bottom"
+          className="origin-bottom w-[25px] h-[35px] 2xl:w-[35px] 2xl:h-[50px]"
         >
           <circle
             cx="52"
@@ -68,7 +66,7 @@ const Logo = () => {
             strokeWidth="10"
           />
         </svg>
-        <div className="max-lg:hidden group flex items-center gap-1 capitalize overflow-hidden w-0 group-hover:w-[400%] transition-all duration-500 absolute left-10 bottom-0">
+        <div className="max-lg:hidden group flex items-center gap-1 capitalize overflow-hidden w-0 group-hover:w-[600%] transition-all duration-500 absolute left-10 bottom-0">
           <div>terel</div>
           <div>phillips</div>
         </div>

@@ -21,10 +21,10 @@ const ProjectsContainer = ({ data }: ProjectsProps) => {
   return (
     <Section id="projects" height className="bg-secondary text-primary">
       <div ref={targetRef} className="relative h-[300vh]">
-        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <HeaderText text="projects" className="absolute top-36" />
+        <div className="sticky top-0 flex flex-col justify-center gap-10 h-screen overflow-hidden">
+          <HeaderText text="projects" />
           <motion.div style={{ x }}>
-            <div className="flex gap-5 lg:gap-10 lg:mt-28">
+            <div className="flex gap-5 lg:gap-10">
               {data.map((project, i) => (
                 <ProjectCard
                   key={i}

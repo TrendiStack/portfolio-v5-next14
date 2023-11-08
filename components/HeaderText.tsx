@@ -7,11 +7,11 @@ interface HeaderTextProps {
 const HeaderText = ({ text, className, subheading }: HeaderTextProps) => {
   switch (subheading) {
     case true:
-      return <h2 className={`lg:text-2xl ${className}`}>{text}</h2>;
+      return <h2 className={`text-2xl sm:text-4xl  ${className}`}>{text}</h2>;
     default:
       return (
         <h1
-          className={`text-4xl sm:text-5xl lg:text-8xl uppercase ${className}`}
+          className={`text-4xl sm:text-5xl md:text-5xl  2xl:text-8xl uppercase ${className}`}
         >
           {text}
         </h1>

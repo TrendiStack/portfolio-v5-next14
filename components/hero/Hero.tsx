@@ -62,19 +62,22 @@ const Hero = () => {
         <ContextDivider colour="secondary" />
 
         <div className="flex max-sm:flex-col max-sm:gap-8">
-          <p className="w-full uppercase text-3xl font-light">
+          <p className="w-full uppercase xl:text-2xl 2xl:text-3xl font-light">
             latest projects <br />
             ©2022
           </p>
-          <p className="max-md:absolute bottom-14 sm:text-xl lg:text-2xl">
+          <p className="max-md:absolute bottom-14 sm:text-xl 2xl:text-2xl">
             An inquisitive developer rooted in the vibrant city of Toronto,
             Ontario.
           </p>
         </div>
 
-        <div className="absolute left-0 bottom-3 w-full flex items-center justify-between lg:font-light px-5 lg:px-8 lg:text-2xl">
+        <div className="absolute left-0 bottom-3 w-full flex items-center justify-between lg:font-light px-5 lg:px-8 lg:text-lg 2xl:text-2xl">
           <div className="flex items-center gap-52">
-            <Link href="#projects" className="text-5xl max-md:hidden">
+            <Link
+              href="#projects"
+              className="text-3xl 2xl:text-5xl max-md:hidden"
+            >
               <PiArrowDownThin />
             </Link>
             <Link
