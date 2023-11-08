@@ -23,7 +23,7 @@ const Projects = ({ params, data }: ProjectsProps) => {
   const images = filteredData.images || [];
 
   return (
-    <Section id="project" className="pt-32 lg:px-28 lg:pt-72">
+    <Section id="project" className="pt-32 2xl:px-72 2xl:pt-72">
       <HeaderText text={heading} />
       <HeaderText
         subheading
